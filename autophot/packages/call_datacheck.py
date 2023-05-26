@@ -376,9 +376,9 @@ def checkteledata(autophot_input,flst,filepath = None):
 
     if filter is similar to  available_filters it isn't asked for
     '''
-    base_filepath ='/'.join(os.path.os.path.dirname(os.path.abspath(__file__)).split('/')[0:-1])
+    base_filepath = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     filters_yml = 'filters.yml'
-    filters_input = cs(os.path.join(base_filepath+'/databases',filters_yml )).load_vars()
+    filters_input = cs(os.path.join(base_filepath, 'databases', filters_yml)).load_vars()
     
     
     
