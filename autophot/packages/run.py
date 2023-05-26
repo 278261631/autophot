@@ -214,11 +214,10 @@ def run_autophot(autophot_input):
     # =============================================================================
     
     
-    filepath ='/'.join(os.path.os.path.dirname(os.path.abspath(__file__)).split('/')[0:-1])
+    filepath = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     catalog_autophot_input_yml = 'catalog.yml'
     
-    
-    catalog_autophot_input = cs(os.path.join(filepath+'/databases',catalog_autophot_input_yml),
+    catalog_autophot_input = cs(os.path.join(filepath, 'databases', catalog_autophot_input_yml),
                                 autophot_input['catalog']['use_catalog']).load_vars()
 
 
